@@ -1,19 +1,17 @@
 class PigLatin
+  #VOWELS = %w[a e i o u]
 
-  def translate(words)  #isolate
-    words = words.split 
-    translation = [] #new array to insert each translated word
-    words.each do |word|
-    end
+  def self.translate(phrase)
+    phrase.split.map { |word| translate_word(word) }.join(' ')
+  end  
 
-    if word[0] =~ /[aeiou]/
-      word = word + 'yay'
-    elsif
-     word = word[word.index(/[aeiou]/)..- 1] + word[0..- 1] + 'ay' 
-   end
-   translation << word
- end
- translation.join(" ")
+  def self.translate(word)
+    length = word.index(/[aeiou]/)
+    prefix = word.slice(0, length)
+    suffix = length == 0 ? 'yay' : prefix + 'ay'
+
+    word[length..-1] + suffix
+  end
 end
 
 

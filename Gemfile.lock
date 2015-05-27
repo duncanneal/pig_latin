@@ -9,4 +9,4 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
-  observr
+  observr (~> 1.0.5)
