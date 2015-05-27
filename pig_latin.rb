@@ -16,5 +16,4 @@ class PigLatin
  translation.join(" ")
 end
 
-# might translate words beginning w/consonant by slicing before the first vowel and adding to the end
 
