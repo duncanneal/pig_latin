@@ -14,3 +14,13 @@ class PigLatinTest < MiniTest::Test
     expected = "umanhay"
     assert_equal expected, human.translate
   end
+
+
+
+
+
+
+    def self.test_order
+    :alpha
+  end
+end
